@@ -23,6 +23,7 @@ public class UsuarioAPi {
 	
 	@GetMapping({"/obtener"})
 	public ResponseEntity<?> getUsuarioById(@RequestParam(name = "id") int id) {
+		System.out.println("Ejecutando metodo api");
 		return ResponseEntity.ok(userRepository.findById_usuario(id));
 	}
 
